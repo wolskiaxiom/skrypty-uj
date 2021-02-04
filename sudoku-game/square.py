@@ -16,9 +16,9 @@ class Square:
         self.x = x
         self.y = y
         center_coordinates = self.calculate_center(x, y)
-        self.txt_surface = pg.Surface((c.cell_size, c.cell_size))
-        self.txt_rect = pg.Rect(center_coordinates[1], center_coordinates[0], c.cell_size, c.cell_size)
+        self.txt_surface = pg.Surface((c.cell_size - 15, c.cell_size - 5))
+        self.txt_rect = pg.Rect(center_coordinates[1], center_coordinates[0], c.cell_size - 15, c.cell_size - 5)
 
     def set_text(self, text, font, color, background=None):
-        self.txt_surface = font.render(str(text), True, color, background)
+        self.txt_surface = font.render(str(text), True, color)
 
